@@ -8,6 +8,8 @@ import com.susu.ssm.dao.UserMapper;
 import com.susu.ssm.pojo.User;
 import com.susu.ssm.service.UserService;
 
+import java.util.List;
+
 @Service("userService")
 public class UserServiceImpl implements UserService
 {
@@ -19,5 +21,9 @@ public class UserServiceImpl implements UserService
     {
         return this.userMapper.selectByPrimaryKey(userId);
     }
-    
+
+    @Override
+    public List<User> getUserList() {
+        return this.userMapper.selectUserList();
+    }
 }
