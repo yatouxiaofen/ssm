@@ -1,4 +1,4 @@
-package com.susu.ssm.exception;
+package common.framework.exception;
 
 /**
  * 无权限异常

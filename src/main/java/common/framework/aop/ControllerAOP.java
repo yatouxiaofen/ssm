@@ -1,12 +1,11 @@
-package com.susu.ssm.aop;
+package common.framework.aop;
 
-import com.susu.ssm.bean.ResultBean;
-import com.susu.ssm.exception.CheckException;
-import com.susu.ssm.exception.UnloginException;
+import common.framework.bean.ResultBean;
+import common.framework.exception.CheckException;
+import common.framework.exception.UnloginException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint;
 
 public class ControllerAOP {
     private static final Logger logger = LoggerFactory.getLogger(ControllerAOP.class);

@@ -1,4 +1,4 @@
-package com.susu.ssm.bean;
+package common.framework.bean;
 
 import java.io.Serializable;
 

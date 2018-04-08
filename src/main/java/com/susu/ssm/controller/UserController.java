@@ -3,7 +3,7 @@ package com.susu.ssm.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import com.susu.ssm.bean.ResultBean;
+import common.framework.bean.ResultBean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

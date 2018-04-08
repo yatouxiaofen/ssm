@@ -53,10 +53,10 @@
     </bean>
 
     <aop:aspectj-autoproxy/>
-    <bean id="controllerAop" class="com.susu.ssm.aop.ControllerAOP"/>
+    <bean id="controllerAop" class="common.framework.aop.ControllerAOP"/>
     <aop:config>
         <aop:aspect id="myAop" ref="controllerAop">
-            <aop:pointcut id="target" expression="execution(public com.susu.ssm.bean.ResultBean *(..))"/>
+            <aop:pointcut id="target" expression="execution(public common.framework.bean.ResultBean *(..))"/>
             <aop:around method="handlerControllerMethod" pointcut-ref="target"/>
         </aop:aspect>
     </aop:config>
