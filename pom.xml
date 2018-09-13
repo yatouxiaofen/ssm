@@ -10,7 +10,11 @@
 
   <properties>
     <!-- spring版本号 -->
-    <spring.version>4.0.6.RELEASE</spring.version>
+    <spring.version>4.3.18.RELEASE</spring.version>
+    <!-- 需要搭配spring版本4.3.5以上
+       否则使用aop：config会导致
+       java.lang.IllegalStateException: Expected raw type form of org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$Match
+    -->
     <org.aspectj-version>1.6.10</org.aspectj-version>
     <!-- mybatis版本号 -->
     <mybatis.version>3.2.6</mybatis.version>
@@ -83,7 +87,7 @@
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjrt</artifactId>
-      <version>${org.aspectj-version}</version>
+      <version>1.8.10</version>
     </dependency>
 
     <!-- aop -->
@@ -108,8 +112,16 @@
       <version>1.3.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.1</version>
+    </dependency>
+
     <!-- 导入java ee jar 包 -->
     <!-- <dependency>
+
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
         <version>6.0</version>
@@ -163,10 +175,22 @@
     <!-- log end -->
 
     <!-- 映入JSON -->
-    <dependency>
+    <!--<dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-asl</artifactId>
       <version>1.9.13</version>
+    </dependency>-->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.8.9</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.8.9</version>
     </dependency>
     <!-- 上传组件包 -->
     <dependency>
@@ -208,6 +232,13 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.16.18</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.7</version>
     </dependency>
   </dependencies>
 
