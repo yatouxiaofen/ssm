@@ -10,7 +10,7 @@
 
   <properties>
     <!-- spring版本号 -->
-    <spring.version>4.3.18.RELEASE</spring.version>
+    <spring.version>5.2.22.RELEASE</spring.version>
     <!-- 需要搭配spring版本4.3.5以上
        否则使用aop：config会导致
        java.lang.IllegalStateException: Expected raw type form of org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$Match
